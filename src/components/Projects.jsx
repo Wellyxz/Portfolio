@@ -7,14 +7,14 @@ const projectsData = [
     id: 1,
     title: 'WCTF',
     description: 'Sebuah website CTF untuk menguji kemampuan Cyber Security.        ',
-    imageUrl: '/public/images/WCTF Homepage.png',
+    imageUrl: '/images/WCTF Homepage.png',
     liveUrl: '#',
   },
   {
     id: 2,
     title: 'Tong Sampah Otomatis',
     description: 'Sebuah tong sampah yang modern, tong sampah tersebut adalah tong sampah otomatis dengan sistem sensor.',
-    imageUrl: '/public/images/Tong sampah otomatis.jpeg',
+    imageUrl: '/images/Tong sampah otomatis.jpeg',
     liveUrl: '#',
   },
 ];

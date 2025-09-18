@@ -6,31 +6,31 @@ const certificatesData = [
     id: 1,
     title: 'Virtual Bootcamp Batch 1 Digital Business and Cyber Security',
     organization: 'Universitas Siber Asia & Universitas Nasional',
-    imageUrl: '/public/images/Sertifikat Virtual Bootcamp Batch 1 Digital Business and Cyber Security Waly Al Fathah_page-0001.jpg',
+    imageUrl: '/images/Sertifikat Virtual Bootcamp Batch 1 Digital Business and Cyber Security Waly Al Fathah_page-0001.jpg',
   },
   {
     id: 2,
     title: 'Pelatihan CTF 2025 UKM Laos',
     organization: 'Universitas Jember ',
-    imageUrl: '/public/images/Sertifikat Pelatihan CTF 2025 UKM Laos.jpeg',
+    imageUrl: '/images/Sertifikat Pelatihan CTF 2025 UKM Laos.jpeg',
   },
    {
     id: 3,
     title: 'Webinar UI DigiTalk 2024',
     organization: 'BEM UI',
-    imageUrl: '/public/images/Sertifikat UI DigiTalk 2024.jpeg',
+    imageUrl: '/images/Sertifikat UI DigiTalk 2024.jpeg',
   },
   {
     id: 4,
     title: 'Webinar From Zero Hacker',
     organization: 'Jadi Hacker',
-    imageUrl: '/public/images/Sertifikat From Zero To Hacker.jpeg',
+    imageUrl: '/images/Sertifikat From Zero To Hacker.jpeg',
   },
    {
     id: 5,
     title: 'Webinar Digital Forensic 101',
     organization: 'Jadi Hacker',
-    imageUrl: '/public/images/Sertifikat webinar Digital Forensics 101.png',
+    imageUrl: '/images/Sertifikat webinar Digital Forensics 101.png',
   },
 ];
 

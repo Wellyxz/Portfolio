@@ -23,7 +23,7 @@ const Hero = () => {
       drop-shadow-[0_0_15px_rgba(0,255,255,0.7)] z-20 shadow-glow-cyan">
         <div className="w-full h-full rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">
           <img
-            src=".\public\images\profil_sementara-removebg-preview.png"
+            src="/images/profil_sementara-removebg-preview.png"
             alt="Waly Al Fathah"
             className="w-full h-full object-cover rounded-full"
           />
@@ -80,12 +80,6 @@ const Hero = () => {
               <FaLinkedin className="transition-all duration-300 group-hover:text-cyan-400 group-hover:drop-shadow-lg" />
             </a>
           </div>
-          <a 
-            href="\public\CV_Waly Al Fathah_XII SIJA 1.docx" 
-            download="CV_Waly Al Fathah.docx" 
-            className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors duration-300 shadow-glow-cyan">
-            Download CV
-          </a>
         </div>
       </div>
     </section>

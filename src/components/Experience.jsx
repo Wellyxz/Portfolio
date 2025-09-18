@@ -6,28 +6,28 @@ const experiencesData = [
     role: 'Anggota MPK SMKN 69 Jakarta',
     company: 'MPK SMKN 69 Jakarta',
     period: '2024 - 2025',
-    imageURL: '/public/images/MPK.jpg', // Ganti dengan URL gambar perusahaan
+    imageURL: '/images/MPK.jpg', // Ganti dengan URL gambar perusahaan
     description: 'Saya menjabat sebagai salah satu anggota dari organisasi MPK 69 Jakarta dan belajar tentang tanggung jawab, management waktu, public speaking dan kerja sama tim.',
   },
   {
     role: 'Peserta LKSW Cyber Security 2025',
     company: 'Kemendikbudristek',
     period: '2025',
-    imageURL: '/public/images/LKSW Cyber Security 2025.jpeg', // Ganti dengan URL gambar perusahaan
+    imageURL: '/images/LKSW Cyber Security 2025.jpeg', // Ganti dengan URL gambar perusahaan
     description: 'Saya menjadi salah satu peserta dalam ajang kompetisi LKSW bidang Cyber Security 2025 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti mengindentifikasi kerentanan sistem dan jaringan sekaligus mengeksplotasinya.',
   },
   {
     role: 'Peserta Kompetisi WRECK IT 5.0',
     company: 'Korps Taruna Politeknik Siber dan Sandi Negara',
     period: '2024',
-    imageURL: '/public/images/Wrect-It 5.0.jpeg', // Ganti dengan URL gambar perusahaan
+    imageURL: '/images/Wrect-It 5.0.jpeg', // Ganti dengan URL gambar perusahaan
     description: 'Saya menjadi salah satu peserta dalam ajang kompetisi WRECK IT 5.0 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti menganalisis kerentanan dalam suatu sistem dan jaringan sekaligus mengeskploitasinya.',
   },
   {
     role: 'Peserta Kompetisi WRECK IT 6.0',
     company: 'Korps Taruna Politeknik Siber dan Sandi Negara',
     period: '2025',
-    imageURL: '/public/images/Wrect-It 6.0.png', // Ganti dengan URL gambar perusahaan
+    imageURL: '/images/Wrect-It 6.0.png', // Ganti dengan URL gambar perusahaan
     description: 'Saya menjadi salah satu peserta dalam ajang kompetisi WRECK IT 6.0 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti menganalisis kerentanan dalam suatu sistem dan jaringan sekaligus mengeskploitasinya.',
   },
 ];
