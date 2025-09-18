@@ -3,25 +3,32 @@ import ParticlesBackground from './Particles'; // Pastikan path-nya benar
 
 const experiencesData = [
   {
-    role: 'Frontend Developer',
-    company: 'Tech Solutions Inc.',
-    period: '2023 - Sekarang',
-    imageURL: 'https://via.placeholder.com/150', // Ganti dengan URL gambar perusahaan
-    description: 'Mengembangkan dan memelihara aplikasi web menggunakan React dan JavaScript. Bertanggung jawab atas implementasi fitur baru, perbaikan bug, dan optimasi performa. Berkolaborasi dengan tim backend dan desainer UI/UX.',
+    role: 'Anggota MPK SMKN 69 Jakarta',
+    company: 'MPK SMKN 69 Jakarta',
+    period: '2024 - 2025',
+    imageURL: '/public/images/MPK.jpg', // Ganti dengan URL gambar perusahaan
+    description: 'Saya menjabat sebagai salah satu anggota dari organisasi MPK 69 Jakarta dan belajar tentang tanggung jawab, management waktu, public speaking dan kerja sama tim.',
   },
   {
-    role: 'Junior Web Developer',
-    company: 'Creative Studio Co.',
-    period: '2021 - 2023',
-    imageURL: 'https://via.placeholder.com/150', // Ganti dengan URL gambar perusahaan
-    description: 'Membangun website statis dan dinamis dengan HTML, CSS, dan JavaScript. Bekerja sama dengan tim untuk merancang tata letak dan memastikan responsivitas di berbagai perangkat.',
+    role: 'Peserta LKSW Cyber Security 2025',
+    company: 'Kemendikbudristek',
+    period: '2025',
+    imageURL: '/public/images/LKSW Cyber Security 2025.jpeg', // Ganti dengan URL gambar perusahaan
+    description: 'Saya menjadi salah satu peserta dalam ajang kompetisi LKSW bidang Cyber Security 2025 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti mengindentifikasi kerentanan sistem dan jaringan sekaligus mengeksplotasinya.',
   },
   {
-    role: 'Freelance Web Designer',
-    company: 'Independen',
-    period: '2020 - 2021',
-    imageURL: 'https://via.placeholder.com/150', // Ganti dengan URL gambar perusahaan
-    description: 'Menerima proyek desain dan pengembangan website untuk klien perorangan. Menggunakan Figma untuk desain dan mengimplementasikannya menjadi kode fungsional.',
+    role: 'Peserta Kompetisi WRECK IT 5.0',
+    company: 'Korps Taruna Politeknik Siber dan Sandi Negara',
+    period: '2024',
+    imageURL: '/public/images/Wrect-It 5.0.jpeg', // Ganti dengan URL gambar perusahaan
+    description: 'Saya menjadi salah satu peserta dalam ajang kompetisi WRECK IT 5.0 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti menganalisis kerentanan dalam suatu sistem dan jaringan sekaligus mengeskploitasinya.',
+  },
+  {
+    role: 'Peserta Kompetisi WRECK IT 6.0',
+    company: 'Korps Taruna Politeknik Siber dan Sandi Negara',
+    period: '2025',
+    imageURL: '/public/images/Wrect-It 6.0.png', // Ganti dengan URL gambar perusahaan
+    description: 'Saya menjadi salah satu peserta dalam ajang kompetisi WRECK IT 6.0 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti menganalisis kerentanan dalam suatu sistem dan jaringan sekaligus mengeskploitasinya.',
   },
 ];
 
@@ -37,7 +44,7 @@ const Experience = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Judul utama dengan gradasi */}
         <h2 className="text-center text-4xl font-bold mb-16 relative after:block after:w-16 after:h-1 after:bg-cyan-400 after:mx-auto after:mt-2">My Experience</h2>
-        <div className="flex flex-col md:flex-row justify-center gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {experiencesData.map((exp, index) => (
             <div
               className="flex-1 bg-gray-800 p-8 rounded-xl flex flex-col items-center text-center shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_3px_rgba(56,189,248,0.5),0_0_15px_3px_rgba(232,121,249,0.5)]"
@@ -45,7 +52,7 @@ const Experience = () => {
             >
               <div className="mb-4">
                 {/* Border gambar dengan gradasi */}
-                <div className="relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-fuchsia-400">
+                <div className="relative w-56 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-fuchsia-400">
                   <img src={exp.imageURL} alt={exp.company} className="w-full h-full rounded-full object-cover" />
                 </div>
               </div>

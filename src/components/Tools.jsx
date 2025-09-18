@@ -1,6 +1,6 @@
 import React from 'react';
-import { SiWireshark, SiBurpsuite, SiMetasploit, SiFigma, SiGithub, } from 'react-icons/si';
-import { BiLogoVisualStudio } from 'react-icons/bi';
+import { SiWireshark, SiBurpsuite, SiMetasploit, SiVirtualbox, SiKalilinux } from 'react-icons/si';
+import { BiLogoVisualStudio, BiLogoWindows } from 'react-icons/bi';
 import ParticlesBackground from './Particles'; // Make sure the path is correct
 
 const toolsData = [
@@ -8,8 +8,9 @@ const toolsData = [
   { name: 'Burpsuite', icon: <SiBurpsuite /> },
   { name: 'Metasploit', icon: <SiMetasploit /> },
   { name: 'VS Code', icon: <BiLogoVisualStudio /> },
-  { name: 'GitHub', icon: <SiGithub /> },
-  { name: 'Figma', icon: <SiFigma /> },
+  { name: 'Virtual Box', icon: <SiVirtualbox /> },
+  { name: 'Kali Linux', icon: <SiKalilinux/> },
+  { name: 'Windows', icon: <BiLogoWindows/> },
 ];
 
 const Tools = () => {

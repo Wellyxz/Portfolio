@@ -6,29 +6,31 @@ const certificatesData = [
     id: 1,
     title: 'Virtual Bootcamp Batch 1 Digital Business and Cyber Security',
     organization: 'Universitas Siber Asia & Universitas Nasional',
-    imageUrl: '/public/images/Sertifikat Virtual Bootcamp Batch 1 Digital Business and Cyber Security Waly Al Fathah_page-0001.jpg', // Path yang benar
-    certificateUrl: 'https://www.credly.com/badges/certificate-id', 
+    imageUrl: '/public/images/Sertifikat Virtual Bootcamp Batch 1 Digital Business and Cyber Security Waly Al Fathah_page-0001.jpg',
   },
   {
     id: 2,
-    title: 'Google Data Analytics Professional Certificate',
-    organization: 'Coursera',
-    imageUrl: '/public/images/Sertifikat Virtual Bootcamp Batch 1 Digital Business and Cyber Security Waly Al Fathah_page-0001.jpg',
-    certificateUrl: 'https://www.coursera.org/verify/certificate-id',
+    title: 'Pelatihan CTF 2025 UKM Laos',
+    organization: 'Universitas Jember ',
+    imageUrl: '/public/images/Sertifikat Pelatihan CTF 2025 UKM Laos.jpeg',
   },
-  {
+   {
     id: 3,
-    title: 'Certified Ethical Hacker',
-    organization: 'EC-Council',
-    imageUrl: 'https://via.placeholder.com/400x300.png?text=Ethical+Hacker',
-    certificateUrl: '#',
+    title: 'Webinar UI DigiTalk 2024',
+    organization: 'BEM UI',
+    imageUrl: '/public/images/Sertifikat UI DigiTalk 2024.jpeg',
   },
   {
     id: 4,
-    title: 'Front End Development Libraries',
-    organization: 'freeCodeCamp',
-    imageUrl: 'https://via.placeholder.com/400x300.png?text=freeCodeCamp',
-    certificateUrl: '#',
+    title: 'Webinar From Zero Hacker',
+    organization: 'Jadi Hacker',
+    imageUrl: '/public/images/Sertifikat From Zero To Hacker.jpeg',
+  },
+   {
+    id: 5,
+    title: 'Webinar Digital Forensic 101',
+    organization: 'Jadi Hacker',
+    imageUrl: '/public/images/Sertifikat webinar Digital Forensics 101.png',
   },
 ];
 
@@ -40,7 +42,7 @@ const Certificates = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-center text-4xl font-bold mb-16 relative after:block after:w-16 after:h-1 after:bg-cyan-400 after:mx-auto after:mt-2">My Certificates</h2>
+        <h2 className="text-center text-4xl font-bold mb-16 relative after:block after:w-16 after:h-1 after:bg-cyan-400 after:mx-auto after:mt-2">My Certificate</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificatesData.map((cert) => (
             <a

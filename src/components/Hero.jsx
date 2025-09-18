@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center text-white px-4 md:flex-row md:text-left md:justify-around lg:justify-center lg:gap-20 bg-gray-950"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center text-white px-4 md:flex-row md:text-left md:justify-around lg:justify-center lg:gap-20 bg-gray-950 pt-20 md:pt-0"
     >
       {/* Latar belakang partikel */}
       <div className="absolute inset-0 z-0">
@@ -17,6 +17,19 @@ const Hero = () => {
       {/* Background radial-gradient */}
       <div className="absolute inset-0 bg-radial-gradient-to-br from-cyan-900 via-transparent to-transparent opacity-30 z-10"></div>
 
+      {/* Gambar profil dengan border gradasi dan kilauan */}
+      <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden 
+      bg-gradient-to-tr from-cyan-400 to-fuchsia-400 p-1 mb-8 mt-12 md:mt-0 
+      drop-shadow-[0_0_15px_rgba(0,255,255,0.7)] z-20 shadow-glow-cyan">
+        <div className="w-full h-full rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">
+          <img
+            src=".\public\images\profil_sementara-removebg-preview.png"
+            alt="Waly Al Fathah"
+            className="w-full h-full object-cover rounded-full"
+          />
+        </div>
+      </div>
+      
       {/* Konten utama Hero Section */}
       <div className="md:w-1/2 lg:w-1/3 z-20 p-4">
         {/* Nama dengan gradasi dan kilauan */}
@@ -46,6 +59,8 @@ const Hero = () => {
             3000, 
             'Tetap bermimpi walaupun itu mustahil',
             3000,
+            'Tetap percaya pada apa yang diyakini',
+            3000,
           ]}
           wrapper="p"
           cursor={true}
@@ -65,21 +80,12 @@ const Hero = () => {
               <FaLinkedin className="transition-all duration-300 group-hover:text-cyan-400 group-hover:drop-shadow-lg" />
             </a>
           </div>
-          <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors duration-300 shadow-glow-cyan">
+          <a 
+            href="\public\CV_Waly Al Fathah_XII SIJA 1.docx" 
+            download="CV_Waly Al Fathah.docx" 
+            className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors duration-300 shadow-glow-cyan">
             Download CV
-          </button>
-        </div>
-      </div>
-      {/* Gambar profil dengan border gradasi dan kilauan */}
-      <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden 
-                    bg-gradient-to-tr from-cyan-400 to-fuchsia-400 p-1 mt-8 md:mt-0 
-                    drop-shadow-[0_0_15px_rgba(0,255,255,0.7)] z-20 shadow-glow-cyan">
-        <div className="w-full h-full rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">
-          <img
-            src=".\public\images\profil_sementara-removebg-preview.png"
-            alt="Waly Al Fathah"
-            className="w-full h-full object-cover rounded-full"
-          />
+          </a>
         </div>
       </div>
     </section>

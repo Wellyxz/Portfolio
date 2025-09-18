@@ -7,9 +7,8 @@ const projectsData = [
     id: 1,
     title: 'WCTF',
     description: 'Sebuah website CTF untuk menguji kemampuan Cyber Security.        ',
-    imageUrl: '/public/images/Screenshot (1001).png',
-    liveUrl: 'https://wellyxz.github.io/WCTF/',
-    codeUrl: 'https://github.com/Wellyxz/WCTF',
+    imageUrl: '/public/images/WCTF Homepage.png',
+    liveUrl: '#',
   },
   {
     id: 2,
@@ -17,23 +16,6 @@ const projectsData = [
     description: 'Sebuah tong sampah yang modern, tong sampah tersebut adalah tong sampah otomatis dengan sistem sensor.',
     imageUrl: '/public/images/Tong sampah otomatis.jpeg',
     liveUrl: '#',
-    codeUrl: 'https://github.com/user/project-b',
-  },
-  {
-    id: 3,
-    title: 'Sistem Reservasi C',
-    description: 'Sistem pemesanan online untuk restoran dengan antarmuka yang intuitif dan responsif.',
-    imageUrl: '/assets/images/project3.jpg',
-    liveUrl: '#',
-    codeUrl: 'https://github.com/user/project-c',
-  },
-  {
-    id: 4,
-    title: 'Desain UI/UX D',
-    description: 'Studi kasus desain antarmuka pengguna untuk aplikasi mobile fintech, menggunakan Figma.',
-    imageUrl: '/assets/images/project4.jpg',
-    liveUrl: 'https://www.figma.com/file/id',
-    codeUrl: '#',
   },
 ];
 

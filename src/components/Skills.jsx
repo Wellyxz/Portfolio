@@ -45,10 +45,10 @@ const hardSkillsData = [
 ];
 
 const softSkillsData = [
-  { name: 'Komunikasi', level: 95 },
-  { name: 'Manajemen Waktu', level: 90 },
-  { name: 'Problem Solving', level: 85 },
-  { name: 'Kerja Sama Tim', level: 70 },
+  { name: 'Komunikasi', level: 90 },
+  { name: 'Manajemen Waktu', level: 95 },
+  { name: 'Pemecahan Masalah', level: 80 },
+  { name: 'Kerja Sama Tim', level: 75 },
 ];
 
 const Skills = () => {
@@ -59,10 +59,10 @@ const Skills = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-center text-3xl font-bold mb-10 relative after:block after:w-16 after:h-1 after:bg-cyan-400 after:mx-auto after:mt-2">My Skills</h2>
+        <h2 className="text-center text-3xl font-bold mb-10 relative after:block after:w-16 after:h-1 after:bg-cyan-400 after:mx-auto after:mt-2">My Skill</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="skills-category">
-            <h3 className="text-xl font-semibold text-center mb-5 text-cyan-400">Hard Skills</h3>
+            <h3 className="text-xl font-semibold text-center mb-5 text-cyan-400">Hard Skill</h3>
             <div className="space-y-4">
               {hardSkillsData.map((skill, index) => (
                 <SkillBar key={index} name={skill.name} level={skill.level} />
@@ -71,7 +71,7 @@ const Skills = () => {
           </div>
 
           <div className="skills-category">
-            <h3 className="text-xl font-semibold text-center mt-8 md:mt-0 mb-5 text-cyan-400">Soft Skills</h3>
+            <h3 className="text-xl font-semibold text-center mt-8 md:mt-0 mb-5 text-cyan-400">Soft Skill</h3>
             <div className="space-y-4">
               {softSkillsData.map((skill, index) => (
                 <SkillBar key={index} name={skill.name} level={skill.level} />
