@@ -23,7 +23,7 @@ const Hero = () => {
       drop-shadow-[0_0_15px_rgba(0,255,255,0.7)] z-20 shadow-glow-cyan">
         <div className="w-full h-full rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">
           <img
-            src="/images/profil_sementara-removebg-preview.png"
+            src="/images/Profil_Sementara.png"
             alt="Waly Al Fathah"
             className="w-full h-full object-cover rounded-full"
           />
