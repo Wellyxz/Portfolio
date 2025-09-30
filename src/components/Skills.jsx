@@ -37,7 +37,7 @@ const SkillBar = ({ name, level }) => {
 const hardSkillsData = [
   { name: 'HTML & CSS', level: 95 },
   { name: 'JavaScript', level: 80 },
-  { name: 'PHP', level: 80 },
+  { name: 'PHP', level: 30 },
   { name: 'Python', level: 90 },
   { name: 'C', level: 85 },
   { name: 'React', level: 50 },
@@ -45,7 +45,7 @@ const hardSkillsData = [
 ];
 
 const softSkillsData = [
-  { name: 'Komunikasi', level: 90 },
+  { name: 'Komunikasi', level: 85 },
   { name: 'Manajemen Waktu', level: 95 },
   { name: 'Pemecahan Masalah', level: 80 },
   { name: 'Kerja Sama Tim', level: 75 },
