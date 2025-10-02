@@ -42,7 +42,6 @@ const Contact = () => {
           >
             <FaWhatsapp size={60} className="text-green-500 group-hover:text-green-400 transition-colors duration-300 mb-4" />
             <span className="text-2xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">WhatsApp</span>
-            <span className="text-gray-400 mt-2 text-center">{myPhoneNumber}</span>
           </a>
           
           {/* Kartu Email */}
@@ -54,7 +53,6 @@ const Contact = () => {
           >
             <FaEnvelope size={60} className="text-red-500 group-hover:text-red-400 transition-colors duration-300 mb-4" />
             <span className="text-2xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">Email</span>
-            <span className="text-gray-400 mt-2 text-center">{myEmailAddress}</span>
           </a>
         </div>
       </div>
