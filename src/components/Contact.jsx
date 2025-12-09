@@ -1,63 +1,79 @@
 import React from 'react';
 import ParticlesBackground from './Particles';
 // Impor ikon dari pustaka seperti react-icons
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'; // Menambahkan FaMapMarkerAlt
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaCode } from 'react-icons/fa'; 
 
 const Contact = () => {
-  const myPhoneNumber = '6281283432195'; // Ganti dengan nomor WhatsApp Anda (dengan kode negara, tanpa tanda tambah atau spasi)
-  const myEmailAddress = 'walyalfathah@gmai.com'; // Ganti dengan alamat email Anda
-  const myLocation = 'Jakarta Timur, Indonesia'; // Ganti dengan lokasi Anda
+    const myPhoneNumber = '6281283432195'; 
+    const myEmailAddress = 'walyalfathah@gmail.com';
+    const myLocation = 'Jakarta Timur, Indonesia';
+    const gradientText = 'bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-transparent bg-clip-text';
 
-  return (
-    <section id="contact" className="relative py-20 bg-gray-950 text-white overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <ParticlesBackground />
-      </div>
+    // Konstanta untuk styling
+    const whatsappColor = 'text-cyan-400 group-hover:text-cyan-300'; // Menggunakan Cyan untuk WA
+    const emailColor = 'text-fuchsia-400 group-hover:text-fuchsia-300'; // Menggunakan Fuchsia untuk Email
 
-      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center min-h-[50vh]">
-        <h2 className="text-center text-4xl lg:text-5xl font-extrabold mb-10 relative after:block after:w-20 after:h-1.5 after:bg-gradient-to-r from-cyan-400 to-blue-500 after:rounded-full after:mx-auto after:mt-3">
-          Contact Me
-        </h2>
-        
-        <p className="text-lg text-gray-300 text-center mb-12 max-w-2xl">
-          Jangan ragu untuk menghubungi saya melalui saluran di bawah ini. Saya akan dengan senang hati berdiskusi.
-        </p>
+    return (
+        <section id="contact" className="relative py-20 bg-gray-950 text-white overflow-hidden">
+            {/* Latar belakang partikel (Menggunakan wrapper yang benar) */}
+            <div className="absolute inset-0 z-0 h-full w-full">
+                <ParticlesBackground />
+            </div>
 
-        {/* Info Lokasi */}
-        <div className="flex items-center text-gray-400 text-lg mb-10 space-x-3">
-          <FaMapMarkerAlt className="text-cyan-400" size={24} />
-          <span>{myLocation}</span>
-        </div>
+            <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center min-h-[50vh]">
+                {/* JUDUL UTAMA - Gradien Cyan-Fuchsia */}
+                <h2 className={`text-center text-4xl lg:text-5xl font-extrabold mb-10 ${gradientText} text-shadow-lg`}>
+                    Kontak Saya
+                </h2>
 
-        {/* Bagian Tautan Kontak yang Menarik */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl w-full">
-          {/* Kartu WhatsApp */}
-          <a
-            href={`https://wa.me/${myPhoneNumber}`}
-            className="flex flex-col items-center justify-center p-8 bg-gray-800 rounded-xl shadow-lg 
-                       hover:bg-gray-700 transition-all duration-300 ease-in-out 
-                       transform hover:-translate-y-2 hover:scale-105 group"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp size={60} className="text-green-500 group-hover:text-green-400 transition-colors duration-300 mb-4" />
-            <span className="text-2xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">WhatsApp</span>
-          </a>
-          
-          {/* Kartu Email */}
-          <a
-            href={`mailto:${myEmailAddress}`}
-            className="flex flex-col items-center justify-center p-8 bg-gray-800 rounded-xl shadow-lg 
-                       hover:bg-gray-700 transition-all duration-300 ease-in-out 
-                       transform hover:-translate-y-2 hover:scale-105 group"
-          >
-            <FaEnvelope size={60} className="text-red-500 group-hover:text-red-400 transition-colors duration-300 mb-4" />
-            <span className="text-2xl font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">Email</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  );
+                {/* Info Lokasi - Dibuat lebih menonjol */}
+                <div 
+                    className="flex items-center bg-gray-900/50 rounded-full p-4 px-6 text-gray-200 text-lg mb-10 space-x-3 
+                                shadow-inner shadow-cyan-400/20 border border-fuchsia-400/30"
+                >
+                    <FaMapMarkerAlt className="text-fuchsia-400 animate-pulse" size={20} />
+                    <span className="font-semibold tracking-wide">{myLocation}</span>
+                </div>
+
+                {/* Bagian Tautan Kontak yang Menarik */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl w-full">
+                    
+                    {/* Kartu WhatsApp (Fokus pada Cyan/Komunikasi) */}
+                    <a
+                        href={`https://wa.me/${myPhoneNumber}`}
+                        className="flex flex-col items-center justify-center p-8 bg-gray-900/50 rounded-xl 
+                                   border border-gray-700 hover:border-cyan-400 
+                                   shadow-xl transition-all duration-300 transform hover:scale-[1.05] 
+                                   hover:shadow-cyan-400/50 group"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <FaWhatsapp size={60} className={`${whatsappColor} transition-colors duration-300 mb-4`} />
+                        <span className="text-2xl font-bold text-white tracking-wide">
+                            {/* Menambahkan nomor telepon di bawah nama */}
+                            WhatsApp
+                        </span>
+                         <span className="text-sm text-gray-400 mt-1">{myPhoneNumber}</span>
+                    </a>
+                    
+                    {/* Kartu Email (Fokus pada Fuchsia/Formal) */}
+                    <a
+                        href={`mailto:${myEmailAddress}`}
+                        className="flex flex-col items-center justify-center p-8 bg-gray-900/50 rounded-xl 
+                                   border border-gray-700 hover:border-fuchsia-400 
+                                   shadow-xl transition-all duration-300 transform hover:scale-[1.05] 
+                                   hover:shadow-fuchsia-400/50 group"
+                    >
+                        <FaEnvelope size={60} className={`${emailColor} transition-colors duration-300 mb-4`} />
+                        <span className="text-2xl font-bold text-white tracking-wide">
+                            Email
+                        </span>
+                        <span className="text-sm text-gray-400 mt-1">{myEmailAddress}</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Contact;

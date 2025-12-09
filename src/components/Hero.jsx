@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-radial-gradient-to-br from-cyan-900 via-transparent to-transparent opacity-30 z-10"></div>
 
       {/* Gambar profil dengan border gradasi dan kilauan */}
-      <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden 
+      <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-90 lg:h-90 rounded-full overflow-hidden 
       bg-gradient-to-tr from-cyan-400 to-fuchsia-400 p-1 mb-8 mt-12 md:mt-0 
       drop-shadow-[0_0_15px_rgba(0,255,255,0.7)] z-20 shadow-glow-cyan">
         <div className="w-full h-full rounded-full overflow-hidden bg-gray-900 flex items-center justify-center">

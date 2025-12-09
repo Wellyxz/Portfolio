@@ -1,76 +1,113 @@
 import React from 'react';
-import ParticlesBackground from './Particles'; // Pastikan path-nya benar
+import ParticlesBackground from './Particles';
+import { FaGraduationCap, FaTrophy, FaUserTie } from 'react-icons/fa'; // Ikon untuk kategori
 
 const experiencesData = [
-  {
-    role: 'Anggota MPK SMKN 69 Jakarta',
-    company: 'MPK SMKN 69 Jakarta',
-    period: '2024 - 2025',
-    imageURL: '/images/MPK.jpg', // Ganti dengan URL gambar perusahaan
-    description: 'Saya menjabat sebagai salah satu anggota dari organisasi MPK 69 Jakarta dan belajar tentang tanggung jawab, management waktu, public speaking dan kerja sama tim.',
-  },
-  {
-    role: 'Peserta LKSW Cyber Security 2025',
-    company: 'Kemendikbudristek',
-    period: '2025',
-    imageURL: '/images/LKSW Cyber Security 2025.jpeg', // Ganti dengan URL gambar perusahaan
-    description: 'Saya menjadi salah satu peserta dalam ajang kompetisi LKSW bidang Cyber Security 2025 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti mengindentifikasi kerentanan sistem dan jaringan sekaligus mengeksplotasinya.',
-  },
-  {
-    role: 'Peserta Kompetisi WRECK IT 5.0',
-    company: 'Korps Taruna Politeknik Siber dan Sandi Negara',
-    period: '2024',
-    imageURL: '/images/Wrect-It 5.0.jpeg', // Ganti dengan URL gambar perusahaan
-    description: 'Saya menjadi salah satu peserta dalam ajang kompetisi WRECK IT 5.0 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti menganalisis kerentanan dalam suatu sistem dan jaringan sekaligus mengeskploitasinya.',
-  },
-  {
-    role: 'Peserta Kompetisi WRECK IT 6.0',
-    company: 'Korps Taruna Politeknik Siber dan Sandi Negara',
-    period: '2025',
-    imageURL: '/images/Wrect-It 6.0.png', // Ganti dengan URL gambar perusahaan
-    description: 'Saya menjadi salah satu peserta dalam ajang kompetisi WRECK IT 6.0 yang menguji kemampuan keamanan siber dalam bentuk lomba Capture The Flag seperti menganalisis kerentanan dalam suatu sistem dan jaringan sekaligus mengeskploitasinya.',
-  },
+    {
+        category: 'Organization',
+        role: 'Anggota MPK',
+        company: 'MPK SMKN 69 Jakarta',
+        period: '2024 - 2025',
+        imageURL: '/images/MPK.jpg',
+        description: 'Menjabat sebagai anggota organisasi dan belajar tentang tanggung jawab, manajemen waktu, public speaking, dan kerja sama tim dalam lingkungan sekolah.',
+    },
+    {
+        category: 'Competition',
+        role: 'Peserta LKSW Cyber Security 2025',
+        company: 'Kemendikbudristek',
+        period: '2025',
+        imageURL: '/images/LKSW Cyber Security 2025.jpeg',
+        description: 'Mengikuti kompetisi Capture The Flag (CTF) tingkat wilayah , menguji kemampuan dalam analisis, identifikasi dan eksploitasi kerentanan sistem dan jaringan.',
+    },
+    {
+        category: 'Competition',
+        role: 'Peserta Kompetisi WRECK IT 5.0',
+        company: 'Korps Taruna Poltek SSN',
+        period: '2024',
+        imageURL: '/images/Wrect-It 5.0.jpeg',
+        description: 'Berpartisipasi dalam ajang kompetisi CTF yang diselenggarakan oleh Politeknik Siber dan Sandi Negara, berfokus pada analisis kerentanan dan teknik penetration testing tingkat lanjut.',
+    },
+    {
+        category: 'Competition',
+        role: 'Peserta Kompetisi WRECK IT 6.0',
+        company: 'Korps Taruna Poltek SSN',
+        period: '2025',
+        imageURL: '/images/Wrect-It 6.0.png',
+        description: 'Berpartisipasi kembali dalam ajang kompetisi CTF yang diselenggarakan oleh Politeknik Siber dan Sandi Negara untuk mempertajam kemampuan analisis sistem dan eksploitasi jaringan.',
+    },
+    {
+        category: 'Competition',
+        role: 'Peserta Kompetisi ASTRO CTF 7.0',
+        company: 'BEM STT Nurul Fikri',
+        period: '2025',
+        imageURL: '/images/Astro CTF.png',
+        description: 'Kembali berpartisipasi dalam ajang kompetisi CTF yang diselenggarakan oleh BEM STT Nurul Fikri guna mempertajam kemampuan analisis kerentanan sistem dan jaringan serta mengeksploitasinya',
+    },
 ];
 
 const Experience = () => {
-  return (
-    <section id="experience" className="relative py-20 bg-gray-950 text-white overflow-hidden">
-      {/* Latar belakang partikel */}
-      <div className="absolute inset-0 z-0">
-        <ParticlesBackground />
-      </div>
+    const gradientText = 'bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-transparent bg-clip-text';
 
-      {/* Konten Utama */}
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Judul utama dengan gradasi */}
-        <h2 className="text-center text-4xl font-bold mb-16 relative after:block after:w-16 after:h-1 after:bg-cyan-400 after:mx-auto after:mt-2">My Experience</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {experiencesData.map((exp, index) => (
+    // Komponen Kartu Pengalaman Disesuaikan
+    const ExperienceCard = ({ exp }) => {
+        const isCompetition = exp.category === 'Competition';
+        const icon = isCompetition ? <FaTrophy className="text-fuchsia-400" /> : <FaUserTie className="text-cyan-400" />;
+
+        return (
             <div
-              className="flex-1 bg-gray-800 p-8 rounded-xl flex flex-col items-center text-center shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_3px_rgba(56,189,248,0.5),0_0_15px_3px_rgba(232,121,249,0.5)]"
-              key={index}
+                className={`bg-gray-900/50 p-6 rounded-xl flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left shadow-2xl transition-all duration-300 transform 
+                hover:scale-[1.02] 
+                ${isCompetition 
+                    ? 'hover:shadow-fuchsia-400/30 border border-fuchsia-400/30' 
+                    : 'hover:shadow-cyan-400/30 border border-cyan-400/30'
+                }`}
             >
-              <div className="mb-4">
-                {/* Border gambar dengan gradasi */}
-                <div className="relative w-56 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 to-fuchsia-400">
-                  <img src={exp.imageURL} alt={exp.company} className="w-full h-full rounded-full object-cover" />
+                {/* Visual Kiri (Gambar dan Ikon) */}
+                <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
+                    <div className={`relative w-24 h-24 rounded-full p-1 ${isCompetition ? 'bg-gradient-to-tr from-fuchsia-400 to-cyan-400' : 'bg-gradient-to-tr from-cyan-400 to-fuchsia-400'}`}>
+                        <img src={exp.imageURL} alt={exp.company} className="w-full h-full rounded-full object-cover" />
+                    </div>
+                    <div className="text-3xl mt-2 flex justify-center">{icon}</div>
                 </div>
-              </div>
-              <div className="space-y-2">
-                {/* Role dengan gradasi */}
-                <h3 className="text-2xl font-semibold bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-transparent bg-clip-text">
-                  {exp.role}
-                </h3>
-                <p className="text-lg font-medium text-gray-300">{exp.company}</p>
-                <span className="block text-sm text-gray-400 italic mb-4">{exp.period}</span>
-                <p className="text-base text-gray-400 leading-relaxed">{exp.description}</p>
-              </div>
+                
+                {/* Detail Kanan */}
+                <div className="flex-grow space-y-2">
+                    <span className="block text-sm font-semibold italic text-gray-500">{exp.period}</span>
+                    <h3 className={`text-xl font-bold ${gradientText} text-left`}>
+                        {exp.role}
+                    </h3>
+                    <p className="text-lg font-medium text-gray-300 text-left">{exp.company}</p>
+                    <p className="text-base text-gray-400 leading-relaxed mt-3 text-left">
+                        {exp.description}
+                    </p>
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+        );
+    };
+
+    return (
+        <section id="experience" className="relative py-20 bg-gray-950 text-white overflow-hidden">
+            {/* Latar belakang partikel (Menggunakan wrapper yang benar) */}
+            <div className="absolute inset-0 z-0 h-full w-full">
+                <ParticlesBackground />
+            </div>
+
+            {/* Konten Utama */}
+            <div className="container mx-auto px-4 relative z-10">
+                {/* Judul utama dengan gradasi */}
+                <h2 className={`text-center text-4xl sm:text-5xl font-extrabold mb-12 ${gradientText} text-shadow-lg`}>
+                    Pengalaman
+                </h2>
+
+                <div className="max-w-4xl mx-auto space-y-8">
+                    {/* Menggunakan tata letak list/timeline yang lebih fokus */}
+                    {experiencesData.map((exp, index) => (
+                        <ExperienceCard key={index} exp={exp} />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Experience;

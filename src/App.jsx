@@ -11,6 +11,7 @@ import Tools from './components/Tools';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Certificates from './components/Certificates';
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Projects />
         <Certificates /> {/* Komponen Certificates ditambahkan di sini */}
         <Contact />
+        <Footer />
       </main>
     </div>
   );
