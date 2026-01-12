@@ -15,6 +15,14 @@ const certificatesData = [
     },
     {
         id: 2,
+        title: 'Telkom DigiUp 2025 Cyber Security Officer',
+        organization: 'Telkom Indonesia',
+        imageUrl: '/images/Sertifikat Telkom DigiUp.png',
+        type: 'Bootcamp', 
+        certificateUrl: '/pdf/Sertifikat Telkom DigiUp Waly Al Fathah.pdf', 
+    },
+    {
+        id: 3,
         title: 'Pelatihan CTF 2025 UKM Laos',
         organization: 'Universitas Jember',
         imageUrl: '/images/Sertifikat Pelatihan CTF 2025 UKM Laos.jpeg',
@@ -23,7 +31,7 @@ const certificatesData = [
 
     },
     {
-        id: 3,
+        id: 4,
         title: 'Webinar Digital Forensic 101',
         organization: 'Jadi Hacker',
         imageUrl: '/images/Sertifikat webinar Digital Forensics 101.png',
@@ -31,7 +39,7 @@ const certificatesData = [
         certificateUrl: '/pdf/Sertifikat Digital Forensics 101.pdf',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Webinar From Zero To Hacker',
         organization: 'Jadi Hacker',
         imageUrl: '/images/Sertifikat From Zero To Hacker.jpeg',
@@ -39,7 +47,7 @@ const certificatesData = [
         certificateUrl: '/pdf/Sertifikat From Zero To Hacker.pdf',
     },
     {
-        id: 5,
+        id: 6,
         title: 'Webinar UI DigiTalk 2024',
         organization: 'BEM UI',
         imageUrl: '/images/Sertifikat UI DigiTalk 2024.jpeg',
@@ -47,7 +55,7 @@ const certificatesData = [
         certificateUrl: '/pdf/Sertifikat BEM UI.pdf',
     },
     {
-        id: 6,
+        id: 7,
         title: 'Test TOEIC',
         organization: 'Educational Testing Service (ETC)',
         imageUrl: '/images/Sertifikat TOEIC.png',
@@ -55,7 +63,7 @@ const certificatesData = [
         certificateUrl: '/pdf/Sertifikat_Toeic.pdf',
     },
     {
-        id: 7,
+        id: 8,
         title: 'Kepengurusan',
         organization: 'MPK SMKN 69 Jakarta',
         imageUrl: '/images/Sertifikat MPK.png',
